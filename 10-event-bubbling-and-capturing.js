@@ -1,0 +1,1 @@
+// Checkout this link https://javascript.info/bubbling-and-capturing
