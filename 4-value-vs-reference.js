@@ -9,7 +9,7 @@ Primitive types
 When we assign these variables to other variables using =, we copy the value to the new variable. They are copied by value.
 
 var x = 10
-var y = 20
+var y = 'abc'
 var a = x
 var b = y
 
