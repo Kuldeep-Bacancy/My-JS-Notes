@@ -41,3 +41,33 @@ notes:
 
 
 */
+
+"use strict"
+
+console.log("normal this", this)
+
+function test(){
+  console.log("normal function this", this);
+}
+
+const newTest = () => {
+  console.log("arrow function this", this);
+}
+
+
+const a = {
+  name: "kuldeep",
+  test: function () {
+    console.log("name is", this.name);
+  }
+}
+
+const b = {
+  name: "ajay"
+}
+
+a.test.call(b)
+
+a.test();
+test();
+newTest();
