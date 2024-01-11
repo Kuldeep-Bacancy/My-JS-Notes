@@ -21,17 +21,20 @@ function debounce(func, delay) {
   };
 }
 
-// Example usage:
-const debouncedFunction = debounce(myFunction, 300);
+const getDebounceData = () => {
+  console.log("Debounce Hello World!", new Date().getTime() / 1000);
+}
 
-// Attach debounced function to an event, like a button click
-button.addEventListener('click', debouncedFunction);
+// Example usage:
+const debouncedFunction = debounce(getDebounceData, 2000);
 
 /*
 - So we have defined function called debounce which will take parameters function and delay.
-- We have defined variable called timer which will store timer of function we need to call after certain delay. it is useful when we need to reset our   timer if function get called again.
+- We have defined variable called timer which will store timer of function we need to call after certain delay. it is useful when we need to reset our timer if function get called again.
 - then we are returning a function(closure). In that we are clearing timer first then we are calling our function with setTimeout and also applying current context.
 */
+
+// So whenever we call debounced function it will execute after certain time or specified delay
 
 // Throttling:-------------------------------------------------------------------
 
@@ -55,17 +58,21 @@ function throttle(func, delay) {
   };
 }
 
-// Example usage:
-const throttledFunction = throttle(myFunction, 300);
+const getThrottleData = () => {
+  console.log("Throttle Hello World!", new Date().getTime() / 1000);
+}
 
-// Attach throttled function to an event, like a scroll event
-window.addEventListener('scroll', throttledFunction);
+
+// Example usage:
+const throttledFunction = throttle(getThrottleData, 2000);
 
 /*
 - So we have defined function called throttle which will take parameters function and delay.
 - We have set one boolean value as true which act as flag for when we need to call function
 - then we are returning a function(closure). In that we are checking that is our flag is true then we are calling our function with setTimeout and also applying current context. after that we are setting value as false for our flag and setting timeout for ceratin delay after that our flag value become true!
 */
+
+// in case of throtling function it will execute first time but after that it will execute after the delay you specified!
 
 
 
